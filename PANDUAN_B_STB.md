@@ -205,10 +205,13 @@ Gunakan salinan lokal yang telah disiapkan jika sudah tersedia, sehingga tidak p
 
 1. Dashboard product-service :8091 > Settings > Import collections > Load from JSON file.
 2. Pilih `pb_schema/product_collections.json` dari laptop.
-3. Review nama, field, dan API Rules > Confirm.
-4. Dashboard account-service :8092 > Settings > Import collections > Load from JSON file.
-5. Pilih `pb_schema/account_collections.json` > Review > Confirm.
-6. Cocokkan products dengan tabel B9 dan users/favorites dengan tabel B11.
+3. Aktifkan **Merge with the existing collections** sebelum Review. Pada PocketBase 0.40.5 opsi ini awalnya tidak aktif, sehingga skema parsial bisa menampilkan koleksi internal sebagai Deleted.
+4. Klik Review. Untuk import produk pada instance baru, perubahan yang diharapkan hanya **Added products**. Pastikan tidak ada penghapusan koleksi atau field yang sudah ada, terutama _superusers, users, dan koleksi internal. Jika muncul dialog penghapusan, pilih No, tutup Review, dan periksa kembali opsi Merge.
+5. Setelah preview sesuai, klik Confirm and import.
+6. Dashboard account-service :8092 > Settings > Import collections > Load from JSON file. Pilih `pb_schema/account_collections.json` dan aktifkan **Merge with the existing collections** juga.
+7. Jika muncul peringatan bahwa nama koleksi/field sama tetapi ID berbeda, gunakan **Replace with original IDs**. PocketBase menyesuaikan ID serta referensi relation dalam data import dengan koleksi yang sudah ada. Review kembali; jangan menyetujui penghapusan koleksi internal.
+8. Perubahan account-service yang diharapkan adalah penambahan favorites serta penyesuaian users sesuai skema. Setelah preview sesuai, Confirm and import.
+9. Cocokkan products dengan tabel B9 dan users/favorites dengan tabel B11.
 
 Import dilakukan pada service yang sesuai. Skema produk dan akun berada di database terpisah.
 
@@ -392,3 +395,5 @@ Daftar bukti rinci ini membantu mendokumentasikan B1-B16. Ketentuan eksplisit pe
 - [Dokumentasi PocketBase: API Rules](https://pocketbase.io/docs/api-rules-and-filters/), untuk memperjelas makna respons ketika rules tidak terpenuhi.
 
 Dokumen dan ZIP referensi menjadi acuan tugas. Tautan dokumentasi resmi dipakai untuk pemeriksaan teknis tambahan, tanpa mengubah versi dan arsitektur modul.
+
+Catatan import dashboard diverifikasi pada [kode sumber PocketBase v0.40.5](https://github.com/pocketbase/pocketbase/blob/v0.40.5/ui/src/settings/sync/pageImportCollections.js).

@@ -14,6 +14,7 @@ Status awal: konfigurasi dan template uji tersedia; tanda centang di bawah hanya
 | B7 | Routing health, products, auth, favorites; nginx -t | [ ] | |
 | B8 | Build selesai, tiga service Up, dua superuser dibuat | [ ] | |
 | B9 | Semua field products serta List/View publik, mutasi admin | [ ] | |
+| B10 | Merge with the existing collections aktif; preview tidak menghapus koleksi internal | [ ] | |
 | B10 | Import skema ke service yang sesuai, lima produk terisi | [ ] | |
 | B11 | users Auth; favorites relation, required, cascade, unique index | [ ] | |
 | B11 | Rules hanya memberikan akses favorit kepada pemiliknya | [ ] | |
