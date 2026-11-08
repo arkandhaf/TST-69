@@ -12,7 +12,7 @@ Baca **[PANDUAN_B_STB.md](PANDUAN_B_STB.md)** untuk langkah B1-B16 dan gunakan *
 
 ## Status pengerjaan
 
-Konfigurasi dan skema telah diterapkan pada STB. Lima produk contoh tersedia, alur REST Client berhasil, serta Postman Collection Runner menghasilkan 9 Passed, 0 Failed, dan 0 Errors. Registrasi ulang menghasilkan 400 dengan data.email.code = validation_not_unique; login dan alur favorit berhasil. Kedua berkas pb_schema merupakan hasil Export collections dari instance yang dikerjakan.
+Konfigurasi dan skema telah diterapkan pada STB. Lima produk contoh tersedia, alur REST Client berhasil, serta Postman Collection Runner menghasilkan 9 Passed, 0 Failed, dan 0 Errors. Registrasi ulang menghasilkan 400 dengan data.email.code = validation_not_unique; login dan alur favorit berhasil. Kedua berkas pb_schema merupakan hasil Export collections dari instance yang dikerjakan. Backup kedua service juga telah dibuat dan diunduh, disimpan pribadi di luar proyek dan paket pengumpulan.
 
 Sebelum build, periksa arsitektur server, versi Compose, ketersediaan port, dan lokasi serta ruang penyimpanan Docker.
 

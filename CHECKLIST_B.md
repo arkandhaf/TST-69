@@ -1,6 +1,6 @@
 # Checklist pelaksanaan Bagian B
 
-Status pelaksanaan: konfigurasi, koleksi, skema hasil ekspor, REST Client, dan Postman telah diperiksa. Backup pribadi dicatat setelah pelaksanaan dikonfirmasi.
+Status pelaksanaan: konfigurasi, koleksi, skema hasil ekspor, REST Client, dan Postman telah diperiksa. Backup kedua service sudah dikonfirmasi dibuat dan diunduh; disimpan pribadi di luar proyek.
 
 | Urutan | Kriteria | Selesai | Bukti / catatan aktual |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Status pelaksanaan: konfigurasi, koleksi, skema hasil ekspor, REST Client, dan P
 | B15 | Test 200/400 dibaca bersama body, bukan warna saja | [x] | |
 | B16 | Export products serta users/favorites dari instance STB aktual | [x] | |
 | B16 | Hasil ekspor disimpan di pb_schema dan di-commit ke GitHub | [x] | |
-| B16 | Backup dibuat/diunduh dari masing-masing service | [ ] | Simpan di luar repository |
+| B16 | Backup dibuat/diunduh dari masing-masing service | [x] | Selesai; disimpan pribadi di luar repository |
 | Pengumpulan B | Compose, gateway, pb_schema hasil Export tersedia di GitHub | [x] | https://github.com/arkandhaf/TST-69 |
 | Pengumpulan B | .env, password asli, token, dan backup tidak di-commit | [x] | |
 
