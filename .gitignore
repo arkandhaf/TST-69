@@ -1,0 +1,13 @@
+# Rahasia lokal
+.env
+.env.*
+!.env.example
+*.local.http
+*.local.postman_environment.json
+
+# Data runtime dan backup tidak masuk repository
+pb_data/
+pb_data_*/
+backup-product/
+backup-account/
+node_modules/
