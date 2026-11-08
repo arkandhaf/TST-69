@@ -146,8 +146,6 @@
       "CREATE UNIQUE INDEX `idx_tokenKey__pb_users_auth_` ON `users` (`tokenKey`)",
       "CREATE UNIQUE INDEX `idx_email__pb_users_auth_` ON `users` (`email`) WHERE `email` != ''"
     ],
-    "created": "2026-10-18 00:27:27.976Z",
-    "updated": "2026-10-18 00:27:27.987Z",
     "system": false,
     "authRule": "",
     "manageRule": null,
@@ -159,7 +157,6 @@
       }
     },
     "oauth2": {
-      "providers": [],
       "mappedFields": {
         "id": "",
         "name": "name",
@@ -284,8 +281,6 @@
     "indexes": [
       "CREATE UNIQUE INDEX idx_fav_user_product ON favorites (user, product_id)"
     ],
-    "created": "2026-10-18 00:27:52.586Z",
-    "updated": "2026-10-18 00:27:52.586Z",
     "system": false
   }
 ]

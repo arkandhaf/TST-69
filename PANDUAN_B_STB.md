@@ -2,7 +2,7 @@
 
 Panduan kerja ini mengikuti urutan B1-B16 pada Guide Bagian B, yang sama dengan slide 35-50 pada Full PPT Guide TST. Pembuka monolith/microservice ada pada slide 34. Berkas konfigurasi berasal dari ZIP referensi yang diberikan pengguna.
 
-**Status:** berkas proyek telah disiapkan. Build, import koleksi, pembuatan superuser, pengujian API, dan ekspor ulang dari STB harus dibuktikan dari pelaksanaan. Contoh respons pada dokumen ini adalah hasil yang diharapkan, bukan hasil pengujian yang sudah dilakukan.
+**Status:** konfigurasi, pembuatan koleksi, pengisian lima produk, REST Client, dan Postman telah dilaksanakan. Hasil Runner: 9 Passed, 0 Failed, 0 Errors; respons registrasi 400 sudah dipastikan karena email duplikat. Berkas pb_schema telah diganti dengan hasil Export aktual. Perintah dan contoh respons berikut tetap menjadi panduan penggunaan.
 
 ## Persiapan server
 
@@ -323,6 +323,8 @@ Jalankan Send Request berurutan:
 
 productId berasal dari respons request bernama list; token/userId berasal dari login; favId berasal dari request bernama favs. Jalankan kembali request 8 setelah penghapusan untuk memastikan favorit uji sudah hilang.
 
+Jika hasil favorit berisi product_id berupa teks {{list.response.body.$.items[0].id}}, variabel request belum terselesaikan. Jalankan kembali request 2, 4, dan 6 pada file yang sama sebelum request 7-9. Cocokkan product_id pada favorit dengan id produk aktual; HTTP 200 saja belum membuktikan relasi produk benar.
+
 Pada pengulangan, registrasi dapat menghasilkan 400 karena email sudah ada. Baca body respons untuk memastikan penyebabnya, lalu login ke akun tersebut. Tambah favorit duplikat juga dapat menghasilkan 400. Error validasi lain perlu diperbaiki sesuai field yang dilaporkan.
 
 ## B15 - Postman: Import Koleksi Siap Pakai (slide 49)
@@ -348,7 +350,7 @@ Alur mengikuti modul: ubah koleksi/rule di dashboard, uji lewat REST Client/Post
 2. Dashboard account-service > Settings > Export collections. Pilih users dan favorites lalu simpan sebagai `pb_schema/account_collections.json` pada proyek laptop.
 3. Periksa field, rules, relation, dan unique index hasil ekspor.
 
-File skema yang awalnya disertakan berasal dari ZIP referensi. Kriteria pengumpulan meminta **hasil Export dari instance yang dikerjakan**. Ganti file referensi dengan hasil ekspor aktual sebelum menyatakan Bagian B selesai.
+Berkas di pb_schema saat ini merupakan **hasil Export dari instance STB yang dikerjakan**, sesuai kriteria pengumpulan. Pada perubahan berikutnya, ekspor ulang konfigurasi aktual dan simpan kembali pada dua nama file tersebut.
 
 ### 2. Commit dan push hasil ekspor
 
